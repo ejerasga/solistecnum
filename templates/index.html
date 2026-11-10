@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Solis Tectum Solar Installation — Premium engineered rooftop solar solutions for residential and commercial properties. Get a free quote today." />
+  <title>Solis Tectum — Engineered Solar Protection</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    // Initialize theme before render to avoid flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Solis Tectum Logo" class="nav-logo" />
+        <span class="brand-text">SOLIS TECTUM</span>
+      </a>
+
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery &amp; Reviews</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="nav-cta">Get a Quote</a>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-tag animate-on-scroll">SOLIS = SUN · TECTUM = ROOF</p>
+        <h1 class="hero-headline animate-on-scroll">
+          ENGINEERED<br />
+          SOLAR<br />
+          PROTECTION<br />
+          <span class="hero-accent">FOR EVERY ROOF.</span>
+        </h1>
+        <p class="hero-sub animate-on-scroll">
+          Premium rooftop solar installations designed with architectural precision.
+          We protect your home from rising energy costs while harnessing the power of the Philippine sun.
+        </p>
+        <div class="hero-actions animate-on-scroll">
+          <a href="#contact" class="btn btn-primary">Get a Free Rooftop Quote</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-visual animate-on-scroll">
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Solis Tectum" class="hero-logo-img" />
+            <div class="hero-badge-pill">
+              <span class="badge-dot"></span>
+              <span>Accepting New Rooftop Projects</span>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative geometric shapes -->
+        <div class="geo-shape geo-1"></div>
+        <div class="geo-shape geo-2"></div>
+        <div class="geo-shape geo-3"></div>
+      </div>
+    </div>
+
+    <!-- Scrolling marquee band -->
+    <div class="marquee-band">
+      <div class="marquee-track">
+        <span>SOLAR POWER</span>
+        <span>◆</span>
+        <span>GRID-TIED SYSTEMS</span>
+        <span>◆</span>
+        <span>HYBRID STORAGE</span>
+        <span>◆</span>
+        <span>FREE INSPECTION</span>
+        <span>◆</span>
+        <span>CLEAN ENERGY</span>
+        <span>◆</span>
+        <span>SOLAR POWER</span>
+        <span>◆</span>
+        <span>GRID-TIED SYSTEMS</span>
+        <span>◆</span>
+        <span>HYBRID STORAGE</span>
+        <span>◆</span>
+        <span>FREE INSPECTION</span>
+        <span>◆</span>
+        <span>CLEAN ENERGY</span>
+        <span>◆</span>
+        <span>SOLAR POWER</span>
+        <span>◆</span>
+        <span>GRID-TIED SYSTEMS</span>
+        <span>◆</span>
+        <span>HYBRID STORAGE</span>
+        <span>◆</span>
+        <span>FREE INSPECTION</span>
+        <span>◆</span>
+        <span>CLEAN ENERGY</span>
+        <span>◆</span>
+        <span>SOLAR POWER</span>
+        <span>◆</span>
+        <span>GRID-TIED SYSTEMS</span>
+        <span>◆</span>
+        <span>HYBRID STORAGE</span>
+        <span>◆</span>
+        <span>FREE INSPECTION</span>
+        <span>◆</span>
+        <span>CLEAN ENERGY</span>
+        <span>◆</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       VALUE HIGHLIGHTS
+       ════════════════════════════════════════════ -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll">
+          <span class="value-highlight-title">Tier-1 Equipment</span>
+          <span class="stat-label">High-Efficiency Panels & Inverters</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="value-highlight-title">Custom Design</span>
+          <span class="stat-label">Engineered For Your Roof Structure</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="value-highlight-title">40–70% Savings</span>
+          <span class="stat-label">Estimated Monthly Bill Reduction</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="value-highlight-title">Direct Support</span>
+          <span class="stat-label">Personalized Care From Start To Finish</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SERVICES
+       ════════════════════════════════════════════ -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-tag">WHAT WE DO</p>
+        <h2 class="section-title">Our Solar Solutions</h2>
+        <p class="section-subtitle">
+          End-to-end solar installation services engineered for Philippine homes and businesses.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="6" y1="22" x2="42" y2="22" stroke="currentColor" stroke-width="2"/>
+              <line x1="6" y1="30" x2="42" y2="30" stroke="currentColor" stroke-width="2"/>
+              <line x1="18" y1="14" x2="18" y2="38" stroke="currentColor" stroke-width="2"/>
+              <line x1="30" y1="14" x2="30" y2="38" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="7" r="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="24" y1="4" x2="24" y2="1" stroke="currentColor" stroke-width="2"/>
+              <line x1="28" y1="5.5" x2="30" y2="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="20" y1="5.5" x2="18" y2="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Residential Solar Grid-Tied Systems</h3>
+          <p class="service-desc">
+            High-efficiency monocrystalline panel arrays directly connected to the grid.
+            Offset up to 100% of your electricity consumption with zero battery maintenance.
+          </p>
+          <span class="service-tag">Most Popular</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="10" width="20" height="32" rx="3" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="14" y1="18" x2="34" y2="18" stroke="currentColor" stroke-width="2"/>
+              <line x1="14" y1="26" x2="34" y2="26" stroke="currentColor" stroke-width="2"/>
+              <line x1="14" y1="34" x2="34" y2="34" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 6 L24 10 L26 6" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M26 44 L24 40 L22 44" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="38" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+              <line x1="38" y1="4" x2="38" y2="1" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="8" x2="45" y2="8" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="41" y1="5" x2="43" y2="3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Hybrid Energy Storage Solutions</h3>
+          <p class="service-desc">
+            Solar + battery systems for uninterrupted power. Keep your lights on during
+            brownouts with lithium iron phosphate backup storage integrated seamlessly.
+          </p>
+          <span class="service-tag">Premium</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M12 24 C12 18 18 14 24 14 C30 14 36 18 36 24" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="24" y1="14" x2="24" y2="34" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 19 L24 24 L30 19" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="16" y1="30" x2="32" y2="30" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Off-Grid Independent Systems</h3>
+          <p class="service-desc">
+            Complete standalone solar setups ideal for remote properties or total energy independence. Generate, store, and manage your own clean power without grid reliance.
+          </p>
+          <span class="service-tag">Self-Sufficient</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 38 L24 8 L38 38 Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <line x1="17" y1="28" x2="31" y2="28" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="22" r="2" fill="currentColor"/>
+              <line x1="24" y1="25" x2="24" y2="32" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M6 42 L42 42" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 42 L20 38" stroke="currentColor" stroke-width="2"/>
+              <path d="M28 42 L28 38" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Preventative Maintenance</h3>
+          <p class="service-desc">
+            Scheduled cleaning, thermal imaging, and performance audits to keep your system
+            operating at peak output. Annual maintenance plans starting at ₱2,500/visit.
+          </p>
+          <span class="service-tag">Ongoing Care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       PROJECT GALLERY
+       ════════════════════════════════════════════ -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-tag">PROJECT PORTFOLIO</p>
+        <h2 class="section-title">System Configurations & Concepts</h2>
+        <p class="section-subtitle">
+          Engineered setups and capacities tailored for Philippine residential homes and commercial establishments.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Project 1 -->
+        <div class="project-card animate-on-scroll" data-project-id="p1" role="button" tabindex="0" aria-label="View 5.5kW Hybrid System project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p1-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient>
+                <linearGradient id="p1-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p1-sky)"/>
+              <polygon points="40,250 200,120 360,250" fill="#334155"/>
+              <polygon points="80,230 200,140 320,230" fill="url(#p1-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <line x1="140" y1="185" x2="260" y2="185" stroke="#38bdf8" stroke-width="1"/>
+              <line x1="200" y1="140" x2="200" y2="230" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="330" cy="70" r="24" fill="#F59E0B" opacity="0.8"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">5.5 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">5.5kW Hybrid System</h4>
+            <p class="project-location">📍 Quezon City, Metro Manila</p>
+            <div class="project-details">
+              <span>Concrete Roof</span>
+              <span>Lithium Backup</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card animate-on-scroll" data-project-id="p2" role="button" tabindex="0" aria-label="View 10kW Commercial System project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p2-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#1f2937"/></linearGradient>
+                <linearGradient id="p2-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p2-sky)"/>
+              <polygon points="20,260 380,260 350,140 50,140" fill="#374151"/>
+              <rect x="70" y="155" width="120" height="85" fill="url(#p2-panel)" stroke="#7dd3fc" stroke-width="1.5"/>
+              <rect x="210" y="155" width="120" height="85" fill="url(#p2-panel)" stroke="#7dd3fc" stroke-width="1.5"/>
+              <circle cx="80" cy="65" r="22" fill="#F59E0B" opacity="0.85"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">10 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">10kW Grid-Tied Commercial</h4>
+            <p class="project-location">📍 Makati City, Metro Manila</p>
+            <div class="project-details">
+              <span>Metal Deck</span>
+              <span>High Yield</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card animate-on-scroll" data-project-id="p3" role="button" tabindex="0" aria-label="View 3.3kW Residential System project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p3-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#090d16"/><stop offset="100%" stop-color="#1e293b"/></linearGradient>
+                <linearGradient id="p3-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#030712"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p3-sky)"/>
+              <polygon points="60,260 200,110 340,260" fill="#475569"/>
+              <polygon points="90,240 200,130 310,240" fill="url(#p3-panel)" stroke="#60a5fa" stroke-width="1.5"/>
+              <circle cx="340" cy="50" r="20" fill="#F59E0B" opacity="0.9"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">3.3 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">3.3kW Residential System</h4>
+            <p class="project-location">📍 Antipolo, Rizal</p>
+            <div class="project-details">
+              <span>Tile Roof</span>
+              <span>Budget Friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card animate-on-scroll" data-project-id="p4" role="button" tabindex="0" aria-label="View 8kW Hybrid System project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p4-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient>
+                <linearGradient id="p4-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p4-sky)"/>
+              <polygon points="30,250 200,130 370,250" fill="#334155"/>
+              <polygon points="60,235 200,145 340,235" fill="url(#p4-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <circle cx="70" cy="50" r="26" fill="#F59E0B" opacity="0.8"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">8 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">8kW Hybrid + Battery Backup</h4>
+            <p class="project-location">📍 San Fernando, Pampanga</p>
+            <div class="project-details">
+              <span>Concrete Roof</span>
+              <span>Whole-Home</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card animate-on-scroll" data-project-id="p5" role="button" tabindex="0" aria-label="View 15kW Commercial System project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p5-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#030712"/><stop offset="100%" stop-color="#1f2937"/></linearGradient>
+                <linearGradient id="p5-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p5-sky)"/>
+              <rect x="40" y="130" width="320" height="130" fill="#374151"/>
+              <rect x="60" y="145" width="85" height="100" fill="url(#p5-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <rect x="155" y="145" width="85" height="100" fill="url(#p5-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <rect x="250" y="145" width="85" height="100" fill="url(#p5-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <circle cx="340" cy="50" r="24" fill="#F59E0B" opacity="0.85"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">15 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">15kW Commercial Rooftop</h4>
+            <p class="project-location">📍 Cebu City, Cebu</p>
+            <div class="project-details">
+              <span>Metal Deck</span>
+              <span>Commercial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card animate-on-scroll" data-project-id="p6" role="button" tabindex="0" aria-label="View 6.6kW Residential Grid-Tied project details">
+          <div class="project-image">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="p6-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#334155"/></linearGradient>
+                <linearGradient id="p6-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0369a1"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#p6-sky)"/>
+              <polygon points="40,255 200,125 360,255" fill="#1e293b"/>
+              <polygon points="75,235 200,140 325,235" fill="url(#p6-panel)" stroke="#38bdf8" stroke-width="1.5"/>
+              <circle cx="65" cy="55" r="22" fill="#F59E0B" opacity="0.9"/>
+            </svg>
+            <div class="project-overlay">
+              <span class="project-capacity">6.6 kW</span>
+            </div>
+            <div class="project-view-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Gallery</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">6.6kW Residential Grid-Tied</h4>
+            <p class="project-location">📍 Davao City, Davao del Sur</p>
+            <div class="project-details">
+              <span>Concrete Roof</span>
+              <span>Fast ROI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Customer Commitments ── -->
+      <div class="testimonials-section animate-on-scroll">
+        <h3 class="subsection-title">Our Service Commitments</h3>
+
+        <div class="testimonials-wrapper">
+          <button id="carousel-prev" class="carousel-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <div class="testimonials-viewport">
+            <div class="testimonials-track">
+              <!-- Pillar 1 -->
+              <div class="testimonial-card">
+                <div class="commitment-badge">🛡️ PROTECTION</div>
+                <p class="testimonial-text">
+                  "Engineered with structural roofing safety as our top priority. We guarantee leak-proof mounting brackets and durable wind-rated fixtures for Philippine weather."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">✓</div>
+                  <div>
+                    <strong>Structural Integrity</strong>
+                    <span class="author-loc">Leak-Proof Installation</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="testimonial-card">
+                <div class="commitment-badge">⚡ EFFICIENCY</div>
+                <p class="testimonial-text">
+                  "Only Tier-1 monocrystalline panels with high conversion efficiency, ensuring maximum kilowatt-hour generation per square meter of roof space."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">✓</div>
+                  <div>
+                    <strong>Maximum Yield</strong>
+                    <span class="author-loc">Tier-1 Components</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div class="testimonial-card">
+                <div class="commitment-badge">🤝 TRANSPARENCY</div>
+                <p class="testimonial-text">
+                  "Straightforward pricing with zero hidden fees. We provide clear bill analysis and truthful ROI projections before you commit to anything."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">✓</div>
+                  <div>
+                    <strong>Honest Pricing</strong>
+                    <span class="author-loc">Clear ROI Calculations</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pillar 4 -->
+              <div class="testimonial-card">
+                <div class="commitment-badge">🛠️ SUPPORT</div>
+                <p class="testimonial-text">
+                  "Direct founder & engineer accessibility. When you reach out with questions about your system, you talk directly to the professionals who designed it."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">✓</div>
+                  <div>
+                    <strong>Direct Accessibility</strong>
+                    <span class="author-loc">Personalized Engineering</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="carousel-next" class="carousel-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       FAQ
+       ════════════════════════════════════════════ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-header animate-on-scroll">
+          <p class="section-tag">FAQ</p>
+          <h2 class="section-title">Solar Questions,<br />Answered.</h2>
+          <p class="section-subtitle">
+            Get the facts about going solar with Solis Tectum. Can't find your answer?
+            Chat with our AI assistant or contact us directly.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              <span>How much can I save on my monthly electric bill?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Most homeowners see a <strong>40–70% reduction</strong> in their monthly electric bills after switching to solar.
+                For instance, a ₱10,000/month bill can drop down significantly to ₱3,000–₱6,000 depending on your daily daytime consumption,
+                system capacity, and roof orientation.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              <span>How long does a standard rooftop installation take?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                A typical residential installation takes <strong>1–3 days</strong> depending on system size and roof complexity.
+                The full project timeline from initial site assessment to system design and final commissioning is typically completed smoothly within 1–2 weeks.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              <span>What is the difference between Grid-Tied and Hybrid systems?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                A <strong>Grid-Tied system</strong> powers your home during daylight hours directly from the sun, drastically reducing your utility bill with minimal equipment cost.
+                A <strong>Hybrid system</strong> includes dedicated lithium energy storage (batteries), ensuring your critical home appliances keep running smoothly even during power outages or brownouts.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              <span>What brands of solar panels and inverters do you use?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We use high-grade <strong>Tier-1 monocrystalline panels</strong> and industry-recognized smart inverters (such as Deye, Growatt, and Solis). These components offer superior solar conversion efficiency, durable weather resistance, and dependable performance engineered for Philippine rooftop conditions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              <span>Do you offer financing or installment plans?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We offer <strong>flexible financing options</strong> to make solar accessible to every homeowner:<br /><br />
+                • <strong>0% interest installment</strong> plans up to 12 months<br />
+                • Bank financing partnerships with leading Philippine banks<br />
+                • Cash discounts for upfront full payments<br /><br />
+                Most systems achieve full return on investment within <strong>4–6 years</strong>, after which you enjoy essentially free electricity
+                for the remaining 20+ years of panel life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       CONTACT & LEAD GENERATION
+       ════════════════════════════════════════════ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact info -->
+        <div class="contact-info animate-on-scroll">
+          <p class="section-tag">GET IN TOUCH</p>
+          <h2 class="section-title">Let's Power Your Roof.</h2>
+          <p class="section-subtitle">
+            Ready to switch to solar? Fill out the form or reach us through any of
+            the channels below. We respond within 24 hours.
+          </p>
+
+          <div class="quick-connect">
+            <a href="tel:+639763476557" class="connect-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Call Us</strong>
+                <span>09763476557</span>
+              </div>
+            </a>
+
+            <a href="mailto:ejerasga12@gmail.com" class="connect-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>ejerasga12@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61595985827549" target="_blank" rel="noopener noreferrer" class="connect-badge">
+              <div class="badge-icon messenger">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.15 7.2.16.15.26.37.27.6l.05 1.88c.02.56.6.93 1.11.7l2.1-.93c.17-.08.36-.1.55-.06.88.24 1.82.37 2.77.37 5.64 0 10-4.13 10-9.7S17.64 2 12 2zm5.94 7.53l-2.9 4.6c-.46.73-1.43.92-2.12.42l-2.31-1.73a.6.6 0 00-.72 0l-3.12 2.37c-.42.32-.96-.18-.69-.63l2.9-4.6c.46-.73 1.43-.92 2.12-.42l2.31 1.73a.6.6 0 00.72 0l3.12-2.37c.42-.32.96.18.69.63z"/></svg>
+              </div>
+              <div>
+                <strong>Facebook</strong>
+                <span>Visit our Facebook Page</span>
+              </div>
+            </a>
+
+            <a href="viber://chat?number=%2B639654073894" class="connect-badge">
+              <div class="badge-icon viber">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.6 4.26C17.11 2.86 14.16 2 12 2S6.89 2.86 5.4 4.26C3.77 5.8 3 7.94 3 10.5v.08c.06 2.46.93 4.48 2.53 5.92.22.2.36.5.36.8l.01 1.79c0 .58.65.94 1.15.64l1.77-1c.17-.1.37-.12.56-.07.97.27 2.02.42 3.12.42h.5c2.16 0 5.11-.86 6.6-2.26C21.23 15.28 22 13.14 22 10.58v-.08c0-2.56-.77-4.7-2.4-6.24zM16.84 13.9c-.35.78-.94 1.35-1.72 1.65-.5.2-1.05.28-1.62.28-.84 0-1.78-.2-2.73-.6a11.37 11.37 0 01-3.4-2.52c-.9-.93-1.57-1.9-1.97-2.86-.42-.99-.48-1.9-.19-2.7.3-.78.88-1.36 1.66-1.72.26-.12.56-.08.78.1l1.38 1.37c.2.2.24.5.1.74l-.65 1.12c-.1.17-.08.38.05.53l2.34 2.6c.14.15.35.19.53.1l1.14-.6c.24-.13.54-.08.74.12l1.38 1.38c.18.18.22.47.1.73z"/></svg>
+              </div>
+              <div>
+                <strong>Viber</strong>
+                <span>09654073894</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="contact-form-wrapper animate-on-scroll">
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/af0574e6099a9c94919d690938b3a43f" method="POST">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New Solar Inquiry - Solis Tectum" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="Name" placeholder="Juan Dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-contact">Phone or Email</label>
+              <input type="text" id="cf-contact" name="Contact_Info" placeholder="0917-XXX-XXXX or email@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-bill">Average Monthly Electric Bill (₱)</label>
+              <input type="text" id="cf-bill" name="Monthly_Electric_Bill" placeholder="e.g. 8000" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message <span class="optional">(optional)</span></label>
+              <textarea id="cf-message" name="Message" rows="4" placeholder="Tell us about your roof type, location, or any questions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Inquiry
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Solis Tectum" class="footer-logo" />
+          <p class="footer-tagline">Engineered Solar Protection for Every Roof.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="#services">Grid-Tied Systems</a>
+          <a href="#services">Hybrid Storage</a>
+          <a href="#services">Off-Grid Systems</a>
+          <a href="#services">Maintenance</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="tel:+639763476557">09763476557</a>
+          <a href="mailto:ejerasga12@gmail.com">ejerasga12@gmail.com</a>
+          <a href="https://www.facebook.com/profile.php?id=61595985827549" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solis Tectum Solar Installation. All rights reserved.</p>
+        <p class="footer-latin"><em>Solis</em> — Sun &nbsp; · &nbsp; <em>Tectum</em> — Roof / Shelter</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       CHATBOT WIDGET
+       ════════════════════════════════════════════ -->
+  <div id="chat-widget" class="chat-widget">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <div>
+          <strong>Solar Assistant</strong>
+          <span class="chat-status">Online</span>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask about solar..." autocomplete="off" />
+      <button type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- Chatbot toggle button -->
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <span class="chat-toggle-badge">💬</span>
+  </button>
+
+  <!-- ════════════════════════════════════════════
+       PROJECT GALLERY MODAL
+       ════════════════════════════════════════════ -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="modal-body">
+          <!-- Left: Image Viewer & Gallery Thumbnails -->
+          <div class="modal-gallery-column">
+            <div class="modal-main-image-container">
+              <div id="modal-main-image" class="modal-main-image"></div>
+              <span id="modal-capacity-badge" class="modal-capacity-badge"></span>
+            </div>
+            <div class="modal-thumbnails-wrapper">
+              <p class="modal-thumb-label">Project Views & Photos (Click to preview):</p>
+              <div id="modal-thumbnails" class="modal-thumbnails"></div>
+            </div>
+          </div>
+
+          <!-- Right: Detailed Specs & Lead Action -->
+          <div class="modal-info-column">
+            <span class="modal-category" id="modal-category">SYSTEM CONFIGURATION</span>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-location" id="modal-location"></p>
+            <p class="modal-description" id="modal-description"></p>
+
+            <div class="modal-specs-grid" id="modal-specs"></div>
+
+            <div class="modal-cta-box">
+              <p class="modal-cta-text">Interested in a similar engineered setup for your roof?</p>
+              <a href="#contact" class="btn btn-primary modal-quote-btn" id="modal-quote-btn">Inquire About This Setup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>
+
